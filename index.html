@@ -104,21 +104,23 @@
   .pains{ padding:90px 0 70px; background:var(--sora); color:var(--choco); }
   .pains .head{max-width:560px; margin-bottom:56px;}
   .pains .eyebrow{color:var(--choco-soft);}
-  .pains-title{font-size:clamp(26px,3.6vw,36px); font-weight:900; margin-top:10px; line-height:1.6;}
+  .pains-title{font-size:clamp(26px,3.6vw,36px); font-weight:900; margin-top:10px; line-height:1.4; display:flex; flex-direction:column; align-items:flex-start;}
+  .pains-title .row1{display:flex; align-items:center; gap:8px;}
   .moyamoya-img{
-    height:1.1em;
-    vertical-align:-0.2em;
-    margin:0 2px;
+    height:clamp(48px, 8vw, 76px);
+    width:auto;
+    display:inline-block;
   }
   .bubble-grid{
     display:grid;
     grid-template-columns:repeat(4, 1fr);
-    gap:8px;
+    gap:16px;
     align-items:start;
   }
   .bubble{
     position:relative;
     aspect-ratio:4/3;
+    min-width:0;
   }
   .bubble-bg{
     width:100%;
@@ -130,20 +132,21 @@
     position:absolute;
     top:50%; left:50%;
     transform:translate(-50%,-52%);
-    width:78%;
+    width:82%;
     text-align:center;
     font-weight:700;
-    font-size:14px;
+    font-size:clamp(13px, 1.4vw, 16px);
     line-height:1.5;
-    color:var(--choco);
+    color:#763A08;
   }
-  .bubble-1{margin-top:36px;}
+  .bubble-1{margin-top:56px;}
   .bubble-2{margin-top:0;}
-  .bubble-3{margin-top:48px;}
-  .bubble-4{margin-top:12px;}
+  .bubble-3{margin-top:72px;}
+  .bubble-4{margin-top:16px;}
   @media(max-width:640px){
-    .bubble-grid{grid-template-columns:repeat(2, 1fr); gap:4px;}
+    .bubble-grid{grid-template-columns:repeat(2, 1fr); gap:20px;}
     .bubble-1, .bubble-2, .bubble-3, .bubble-4{margin-top:0;}
+    .bubble span{font-size:14px;}
   }
 
   /* ---------- SERVICES ---------- */
@@ -230,7 +233,7 @@
     <div class="head">
       <div class="eyebrow">よくあるお困りごと</div>
       <h2 class="pains-title">
-        その<img src="moyamoya-title.png" alt="モヤモヤ" class="moyamoya-img"><br>
+        <span class="row1">その<img src="moyamoya-title.png" alt="モヤモヤ" class="moyamoya-img"></span>
         放っておいていませんか?
       </h2>
     </div>
